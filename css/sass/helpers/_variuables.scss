@@ -1,0 +1,36 @@
+// Colors Varriubles
+
+:root {
+  --primaryColor : #8750f7;
+  --secondrarColoer : #2A1454;
+  --mainBg : #f6f3fc;
+  --bodyBg: #fff;
+  --colorText: #140C1C;
+  --revColorText : #ddd;
+}
+:root#dark {
+  --mainBg : #050709;
+  --bodyBg: #0f0715;
+  --colorText: #dddddd;
+  --revColorText : #140C1C;
+}
+
+// Main Var
+
+$transtion: .5s;
+$mainFont: 35px;
+
+// Media
+
+$mobile: 767px;
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
+
+
+// Theme
+
+// Light Mood
+
+
+// Dark Mood

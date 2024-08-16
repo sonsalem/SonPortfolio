@@ -1,0 +1,45 @@
+/* Strat To Top  */
+.totop {
+  position: fixed;
+  @include circle(50px);
+  z-index: 1000000000;
+  right: 35px; bottom: 100px;
+  @extend %centering;
+  opacity: 0;
+  pointer-events: none;
+  &.show {
+    opacity: 1;
+    pointer-events: unset;
+  }
+  .inner {
+    background: var(--bodyBg);
+    @include circle(45px);
+    @extend %centering;
+  }
+}
+/* End To Top  */
+/* Strat DarkMood  */
+.dark-mood-toggle {
+  background-color: var(--mainBg);
+  @include circle(70px);
+  @extend %centering;
+  position: fixed;
+  right: 20px; bottom: 20px;
+  font-size: 30px;
+  z-index: 1000000000;
+  cursor: pointer;
+  &:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+/* End DarkMood  */
+/* Strat Footer  */
+footer {
+  .links {
+    gap: 10px;
+    img {
+    width: 35px; height: 35px;
+    }
+  }
+}
+/* End Footer  */

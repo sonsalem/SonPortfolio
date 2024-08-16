@@ -1,0 +1,124 @@
+/* Gloal Ruls */
+* {
+  @include prefixer (box-sizing, border-box, webkit moz);
+  line-height: 1.7;
+}
+body {
+  font-family: "Chakra Petch", sans-serif;
+  background-color: var(--bodyBg);
+  color: var(--colorText);
+  transition: $transtion;
+}
+ul {
+  list-style: none;
+  padding: 0; margin: 0;
+}
+a {
+  text-decoration: none;
+  position: relative;
+  display: block;
+  color: var(--colorText);
+  &:hover {
+    color: inherit;
+  }
+}
+input {
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
+@media (width <= $small) {
+  p {
+    font-size: 13px;
+  }
+}
+::-webkit-scrollbar {
+  width: 7.5px;
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar-track {
+  background: var(--bodyBg);
+}
+::-webkit-scrollbar-thumb {
+  @include gradient(180deg, var(--primaryColor), var(--secondrarColoer));
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+::selection {
+  background-color: var(--secondrarColoer) !important;
+  color: var(--primaryColor) !important;
+}
+/* Gloal Ruls */
+
+.pointer {
+  cursor: pointer;
+}
+.t-duration {
+  @include prefixer(transition, $transtion);
+}
+%before {
+  content: "";
+  position: absolute;
+}
+%centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pt-padding {
+  padding-top: 100px;
+}
+.pb-padding {
+  padding-bottom: 100px;
+}
+.w-fit {
+  width: fit-content;
+}
+.main-font {
+  font-size: $mainFont;
+}
+.main-border {
+  border: 1px solid var(--primaryColor);
+}
+.primary-color {
+  color: var(--primaryColor)
+}
+.bg-sec {
+  background: var(--mainBg)
+}
+.main-but {
+  @include gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  color: #fff;
+  min-width: 100px;
+  padding: 10px 20px;
+  font {
+    size: 20px;
+    weight: 900;
+  };
+  cursor: pointer;
+  text-align: center;
+  @include prefixer(border-radius, 25px, (moz, webkit));
+  @include prefixer(transition, $transtion, (moz, webkit));
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px,
+    var(--primaryColor) 0 2px 20px 2px;
+  }
+}
+.main-heading {
+  .title {
+    font: {
+      size: 45px;
+      weight: 900;
+    };
+    @include gradient(90deg, var(--primaryColor) , var(--secondrarColoer));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  .dec{
+    max-width: 600px;
+    margin: auto;
+  }
+}

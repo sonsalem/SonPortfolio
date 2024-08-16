@@ -1,0 +1,71 @@
+/// Mixin Media Qurey
+/// @param {point}
+
+@mixin breakpoints($point) {
+  @if $point == mobile {
+    @media (width <= $mobile) {@content;}
+  } @else if $point == small {
+    @media (width >= $small) {@content;}
+  } @else if $point == medium {
+    @media (width >= $medium) {@content;}
+  } @else if $point == large {
+    @media (width >= $large) {@content;}
+  }
+}
+
+/// @return {media}
+
+/// Mixin Overlay
+/// @param {color, alpha, index}
+
+
+@mixin overlay($color, $alpha : .7) {
+  background: rgba($color, $alpha);
+}
+
+/// @return {overlay}
+
+/// Mixin Prefexier
+/// @param {property, value, prefixes}
+
+@mixin prefixer($property, $value, $prefixes: ('webkit', 'moz', 'o')) {
+
+  #{$property}: $value;
+
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+}
+
+/// @return {prefixer}
+
+/// Mixin Anmation
+/// @param {animationName}
+
+@mixin keyFrame($animationName) {
+  @-webkit-keyframes #{$animationName} {@content};
+  @keyframes #{$animationName} {@content};
+}
+
+/// @return {animation}
+
+/// Mixin Gradient
+/// @param {degree, colors...}
+
+@mixin gradient($degree, $colors...) {
+  @include prefixer(background, linear-gradient($degree, $colors));
+}
+
+/// @return {animation}
+
+/// Mixin Before Background
+
+/// @param {dimantion}
+
+@mixin circle($dimentions) {
+  min-width: $dimentions; min-height: $dimentions;
+  max-width: $dimentions; max-height: $dimentions;
+  border-radius: 50%;
+}
+
+/// @return {circle}

@@ -1,0 +1,773 @@
+:root {
+  --primaryColor: #8750f7;
+  --secondrarColoer: #2A1454;
+  --mainBg: #f6f3fc;
+  --bodyBg: #fff;
+  --colorText: #140C1C;
+  --revColorText: #ddd;
+}
+
+:root#dark {
+  --mainBg: #050709;
+  --bodyBg: #0f0715;
+  --colorText: #dddddd;
+  --revColorText: #140C1C;
+}
+
+/* Gloal Ruls */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  line-height: 1.7;
+}
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+  background-color: var(--bodyBg);
+  color: var(--colorText);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+  display: block;
+  color: var(--colorText);
+}
+a:hover {
+  color: inherit;
+}
+
+input {
+  border: 0;
+}
+input:focus {
+  outline: none;
+}
+
+@media (width <= 768px) {
+  p {
+    font-size: 13px;
+  }
+}
+::-webkit-scrollbar {
+  width: 7.5px;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bodyBg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  background: linear-gradient(180deg, var(--primaryColor), var(--secondrarColoer));
+  -webkit-background: -webkit-gradient(linear, left top, left bottom, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  -webkit-background: linear-gradient(180deg, var(--primaryColor), var(--secondrarColoer));
+  -moz-background: linear-gradient(180deg, var(--primaryColor), var(--secondrarColoer));
+  -o-background: linear-gradient(180deg, var(--primaryColor), var(--secondrarColoer));
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+::-moz-selection {
+  background-color: var(--secondrarColoer) !important;
+  color: var(--primaryColor) !important;
+}
+
+::selection {
+  background-color: var(--secondrarColoer) !important;
+  color: var(--primaryColor) !important;
+}
+
+/* Gloal Ruls */
+.pointer {
+  cursor: pointer;
+}
+
+.t-duration {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.works .portifolo-boxs::before, .landing .main .text .social .social-icon::before, .landing::before, .upper-nav .links a::before {
+  content: "";
+  position: absolute;
+}
+
+.dark-mood-toggle, .totop .inner, .totop, .contact .data .box .icon, .landing .main .text .social .social-icon::before, .landing .main .text .social .social-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pt-padding {
+  padding-top: 100px;
+}
+
+.pb-padding {
+  padding-bottom: 100px;
+}
+
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.main-font {
+  font-size: 35px;
+}
+
+.main-border {
+  border: 1px solid var(--primaryColor);
+}
+
+.primary-color {
+  color: var(--primaryColor);
+}
+
+.bg-sec {
+  background: var(--mainBg);
+}
+
+.main-but {
+  background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -webkit-background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  -webkit-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -moz-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -o-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  color: #fff;
+  min-width: 100px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.main-but font {
+  size: 20px;
+  weight: 900;
+}
+.main-but:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px, var(--primaryColor) 0 2px 20px 2px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px, var(--primaryColor) 0 2px 20px 2px;
+}
+
+.main-heading .title {
+  font-size: 45px;
+  font-weight: 900;
+  background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -webkit-background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  -webkit-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -moz-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -o-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.main-heading .dec {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Start Header */
+.upper-nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+}
+.upper-nav.fixed_top {
+  position: fixed;
+  width: 100%;
+  top: -100%;
+  background: var(--mainBg);
+  -webkit-box-shadow: 0px 4px 17.64px 0.36px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 17.64px 0.36px rgba(0, 0, 0, 0.1);
+  -webkit-animation: scrollNav 0.7s forwards;
+          animation: scrollNav 0.7s forwards;
+}
+.upper-nav .logo img {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+}
+.upper-nav .logo a {
+  color: var(--colorText);
+}
+.upper-nav .logo a:hover {
+  color: var(--primaryColor);
+}
+.upper-nav .links a::before {
+  width: 0;
+  height: 2px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -webkit-background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  -webkit-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -moz-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -o-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+}
+.upper-nav .links a:hover::before, .upper-nav .links a.active::before {
+  width: 100%;
+}
+@media (width <= 992px) {
+  .upper-nav .links {
+    margin-top: 20px;
+    -webkit-box-ordinal-group: 10001;
+        -ms-flex-order: 10000;
+            order: 10000;
+    height: 0px;
+    overflow: hidden;
+  }
+  .upper-nav .links ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: start !important;
+    width: 100%;
+  }
+  .upper-nav .links ul li, .upper-nav .links ul a {
+    width: 100%;
+  }
+  .upper-nav .links ul li::before, .upper-nav .links ul a::before {
+    bottom: -4px;
+  }
+  .upper-nav .links.show {
+    height: 259.2px;
+    background: var(--mainBg);
+  }
+}
+.upper-nav .prograss-bar {
+  width: 100%;
+  height: 10px;
+}
+.upper-nav .prograss-bar .prograss {
+  -webkit-animation: scrollYPrograss linear;
+          animation: scrollYPrograss linear;
+  animation-timeline: scroll(y);
+  width: 0;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -webkit-background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  -webkit-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -moz-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -o-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+}
+
+/* End Header */
+/* Start Animation */
+@-webkit-keyframes scrollYPrograss {
+  to {
+    width: 100%;
+  }
+}
+@keyframes scrollYPrograss {
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes scrollNav {
+  to {
+    top: 0;
+  }
+}
+@keyframes scrollNav {
+  to {
+    top: 0;
+  }
+}
+/* End Animation */
+/* Start Landing */
+.landing {
+  padding-top: 180px;
+}
+.landing::before {
+  top: 0;
+  right: 0;
+  width: 322px;
+  height: 308px;
+  border-radius: 50%;
+  background: linear-gradient(260deg, var(--primaryColor) 0, rgba(115, 67, 210, 0) 100%);
+  -webkit-background: linear-gradient(260deg, var(--primaryColor) 0, rgba(115, 67, 210, 0) 100%);
+  -moz-background: linear-gradient(260deg, var(--primaryColor) 0, rgba(115, 67, 210, 0) 100%);
+  -o-background: linear-gradient(260deg, var(--primaryColor) 0, rgba(115, 67, 210, 0) 100%);
+  -webkit-filter: blur(150px);
+  filter: blur(150px);
+  margin-right: -5%;
+  margin-top: -5%;
+  z-index: -1;
+}
+.landing .main {
+  position: relative;
+  z-index: 1;
+}
+.landing .main::after {
+  content: "Hi";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--secondrarColoer);
+  z-index: -1;
+  font-size: 450px;
+  font-weight: 900;
+  -webkit-animation: scalein 1.5s infinite alternate;
+          animation: scalein 1.5s infinite alternate;
+}
+.landing .main .text .name {
+  font-weight: 800;
+}
+@media (width <= 767px) {
+  .landing .main .text .name {
+    font-size: 22px;
+  }
+}
+.landing .main .text .title {
+  background: linear-gradient(120deg, var(--primaryColor) 0, var(--secondrarColoer) 100%);
+  -webkit-background: linear-gradient(120deg, var(--primaryColor) 0, var(--secondrarColoer) 100%);
+  -moz-background: linear-gradient(120deg, var(--primaryColor) 0, var(--secondrarColoer) 100%);
+  -o-background: linear-gradient(120deg, var(--primaryColor) 0, var(--secondrarColoer) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  line-height: 1.2;
+}
+@media (width >= 992px) {
+  .landing .main .text .title {
+    font-size: 65px;
+  }
+}
+.landing .main .text .dec {
+  font-size: 20px;
+}
+.landing .main .text .but:hover {
+  background: var(--primaryColor);
+  color: #fff;
+}
+.landing .main .text .social .social-icon {
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+  z-index: 1;
+  overflow: hidden;
+}
+.landing .main .text .social .social-icon:hover {
+  color: #fff;
+}
+.landing .main .text .social .social-icon::before {
+  width: 0;
+  height: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  background: var(--primaryColor);
+  z-index: -1;
+}
+.landing .main .text .social .social-icon:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.landing .main .image img {
+  rotate: 5deg;
+  border: 2px solid var(--secondrarColoer);
+  border-radius: 38px;
+  -webkit-border-radius: 38px;
+  -moz-border-radius: 38px;
+  -o-border-radius: 38px;
+}
+.landing .main .image img:hover {
+  rotate: 0deg;
+  border-color: var(--primaryColor);
+}
+
+/* End Landing */
+/* Start Services */
+.services .box {
+  border-bottom: 1px solid var(--secondrarColoer);
+}
+.services .box::before {
+  content: "\f061";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 100;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: 30px;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+@media (width <= 767px) {
+  .services .box::before {
+    top: 20px;
+    translate: 0;
+    font-size: 20px;
+  }
+}
+.services .box.active::before, .services .box:hover::before {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+.services .box .number-item {
+  font-size: 20px;
+  font-weight: 900;
+}
+.services .box .heading {
+  font-size: 30px;
+  font-weight: 900;
+}
+.services .active-bg {
+  background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -webkit-background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  -webkit-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -moz-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -o-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  top: 0;
+  left: 0.75rem;
+  z-index: -1;
+}
+
+/* End Services */
+/* Start Works */
+.works .shuffle-pannle {
+  clip-path: polygon(2% 0%, 98% 0%, 100% 50%, 98% 100%, 2% 100%, 0% 50%);
+}
+.works .shuffle-pannle .shuffle-item {
+  color: #Fff;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 7px 20px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(transparent));
+  background: linear-gradient(90deg, transparent, transparent);
+  -webkit-background: -webkit-gradient(linear, left top, right top, from(transparent), to(transparent));
+  -webkit-background: linear-gradient(90deg, transparent, transparent);
+  -moz-background: linear-gradient(90deg, transparent, transparent);
+  -o-background: linear-gradient(90deg, transparent, transparent);
+  background: var(--secondrarColoer);
+  clip-path: polygon(0% 0%, 42% 0%, 50% 0%, 58% 0%, 100% 0%, 100% 50%, 100% 100%, 58% 100%, 50% 100%, 42% 100%, 0% 100%, 0% 50%);
+}
+.works .shuffle-pannle .shuffle-item.active {
+  background: var(--primaryColor);
+  clip-path: polygon(10% 0%, 42% 0%, 50% 10%, 58% 0%, 90% 0%, 100% 50%, 90% 100%, 58% 100%, 50% 90%, 42% 100%, 10% 100%, 0% 50%);
+}
+.works .portifolo-boxs {
+  z-index: 1;
+}
+.works .portifolo-boxs::before {
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 322px;
+  height: 308px;
+  border-radius: 50%;
+  background: linear-gradient(260deg, var(--primaryColor) 0, rgba(115, 67, 210, 0) 100%);
+  -webkit-background: linear-gradient(260deg, var(--primaryColor) 0, rgba(115, 67, 210, 0) 100%);
+  -moz-background: linear-gradient(260deg, var(--primaryColor) 0, rgba(115, 67, 210, 0) 100%);
+  -o-background: linear-gradient(260deg, var(--primaryColor) 0, rgba(115, 67, 210, 0) 100%);
+  filter: blur(150px);
+  -webkit-filter: blur(150px);
+  -moz-filter: blur(150px);
+  -o-filter: blur(150px);
+  z-index: -1;
+}
+.works .portifolo-boxs .box-outer.hide {
+  position: absolute;
+  translate: 0 -10px;
+  opacity: 0;
+  z-index: -1;
+}
+.works .portifolo-boxs .box-outer .box {
+  background: var(--revColorText);
+  padding: 12px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.works .portifolo-boxs .box-outer .box:hover .dec {
+  opacity: 1;
+  translate: 0 0;
+}
+.works .portifolo-boxs .box-outer .box:hover .dec::before {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+.works .portifolo-boxs .box-outer .box .dec {
+  color: #fff;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  opacity: 0;
+  translate: 0 0;
+  width: calc(100% - 24px);
+  background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -webkit-background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  -webkit-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -moz-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -o-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.works .portifolo-boxs .box-outer .box .dec::before {
+  content: "\f061";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 100;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: 22px;
+  -webkit-transform: rotate(-320deg);
+          transform: rotate(-320deg);
+}
+.works .portifolo-boxs .box-outer .box .dec > * {
+  line-height: 1.2;
+}
+
+/* End Works */
+/* Start Journy */
+.journy .box {
+  z-index: 1;
+  background: var(--revColorText);
+}
+.journy .box:hover .inner {
+  opacity: 1;
+}
+.journy .box:hover .time {
+  color: #fff;
+}
+.journy .box .inner {
+  opacity: 0;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -webkit-background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  -webkit-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -moz-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -o-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+}
+
+/* End Journy */
+/* Start Skills */
+.skills .box {
+  width: 180px;
+  height: 180px;
+  border: 1px solid var(--revColorText);
+  background: var(--revColorText);
+}
+.skills .box .inner {
+  width: 100%;
+  height: 100%;
+  padding: 40px 15px 30px;
+}
+.skills .box .inner img {
+  width: 80px;
+  height: 80px;
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+}
+.skills .box .inner .persent {
+  color: #777;
+}
+.skills .box:hover {
+  border-color: var(--primaryColor);
+}
+.skills .box:hover .inner {
+  background: rgba(135, 80, 247, 0.3137254902);
+}
+.skills .box:hover .inner img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  scale: 1.05;
+}
+.skills .box:hover .inner .persent {
+  color: var(--colorText);
+}
+
+/* End Skills */
+/* Start Contact */
+.contact .form-box {
+  background: var(--revColorText);
+}
+.contact .form-box .title {
+  line-height: 1.2;
+}
+.contact .form-box input:not([type=submit]),
+.contact .form-box textarea {
+  background: var(--mainBg);
+  caret-color: var(--colorText);
+  color: var(--colorText);
+  border: 1px solid var(--mainBg);
+  padding: 10px 15px;
+  width: 48%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.contact .form-box input:not([type=submit]):focus,
+.contact .form-box textarea:focus {
+  outline: 0;
+  border-color: var(--primaryColor);
+}
+.contact .form-box textarea {
+  resize: none;
+  height: 200px;
+}
+.contact .data .box .icon {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -webkit-background: -webkit-gradient(linear, left top, right top, from(var(--primaryColor)), to(var(--secondrarColoer)));
+  -webkit-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -moz-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  -o-background: linear-gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+  font-size: 20px;
+  color: #fff;
+}
+.contact .data .box .text > * {
+  line-height: 1.4;
+}
+.contact .data .box .text .link:hover {
+  color: var(--primaryColor);
+}
+
+/* End Contact */
+/* Start KeyFrams */
+@-webkit-keyframes scalein {
+  to {
+    scale: 1.1;
+  }
+}
+@keyframes scalein {
+  to {
+    scale: 1.1;
+  }
+}
+/* End KeyFrams */
+/* Strat To Top  */
+.totop {
+  position: fixed;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  z-index: 1000000000;
+  right: 35px;
+  bottom: 100px;
+  opacity: 0;
+  pointer-events: none;
+}
+.totop.show {
+  opacity: 1;
+  pointer-events: unset;
+}
+.totop .inner {
+  background: var(--bodyBg);
+  min-width: 45px;
+  min-height: 45px;
+  max-width: 45px;
+  max-height: 45px;
+  border-radius: 50%;
+}
+
+/* End To Top  */
+/* Strat DarkMood  */
+.dark-mood-toggle {
+  background-color: var(--mainBg);
+  min-width: 70px;
+  min-height: 70px;
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 30px;
+  z-index: 1000000000;
+  cursor: pointer;
+}
+.dark-mood-toggle:hover {
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* End DarkMood  */
+/* Strat Footer  */
+footer .links {
+  gap: 10px;
+}
+footer .links img {
+  width: 35px;
+  height: 35px;
+}
+
+/* End Footer  */

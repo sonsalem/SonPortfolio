@@ -1,0 +1,325 @@
+/* Start Landing */
+.landing {
+  padding-top: 180px;
+  &::before {
+    @extend %before;
+    top: 0; right: 0;
+    width: 322px; height: 308px;
+    border-radius: 50%;
+    @include gradient(260deg, var(--primaryColor) 0 , rgba(115, 67, 210, 0) 100%) ;
+    // background: linear-gradient(260deg, var(--tj-theme-primary) 0%, rgba(115, 67, 210, 0) 100%);
+    -webkit-filter: blur(150px);
+    filter: blur(150px);
+    margin-right: -5%; margin-top: -5%;
+    z-index: -1;
+  }
+  .main {
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: "Hi";
+      position: absolute;
+      top: 50%; left: 50%;
+      translate: -50% -50%;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px var(--secondrarColoer);
+      z-index: -1;
+      font-size: 450px;
+      font-weight: 900;
+      animation: scalein 1.5s infinite alternate;
+    }
+    .text {
+      .name {
+        font-weight: 800;
+        @media (width <= 767px) {
+          font-size: 22px;
+        }
+      }
+      .title {
+        @include gradient(120deg, var(--primaryColor) 0, var(--secondrarColoer) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+        line-height: 1.2;
+        @media (width >= 992px) {
+          font-size: 65px;
+        }
+      }
+      .dec {
+        font-size: 20px;
+      }
+      .but:hover {
+        background: var(--primaryColor);
+        color: #fff;
+      }
+      .social {
+        .social-icon {
+          @include circle(40px);
+          @extend %centering;
+          z-index: 1;
+          overflow: hidden;
+          &:hover {
+            color: #fff;
+          }
+          &::before {
+            @extend %before;
+            @extend %centering;
+            width: 0; height: 0;
+            @include prefixer(transition, $transtion);
+            @include prefixer(border-radius, 50%);
+            background: var(--primaryColor);
+            z-index: -1;
+          }
+          &:hover::before {
+            width: 100%; height: 100%;
+          }
+        }
+      }
+    }
+    .image {
+      img {
+        rotate: 5deg;
+        border: 2px solid var(--secondrarColoer);
+        @include prefixer(border-radius, 38px);
+        &:hover {
+          rotate: 0deg;
+          border-color: var(--primaryColor);
+        }
+      }
+    }
+  }
+}
+/* End Landing */
+/* Start Services */
+.services {
+  .box {
+    border-bottom: 1px solid var(--secondrarColoer);
+    &::before {
+      content: "\f061";
+      font-family: "Font Awesome 6 Pro";
+      font-weight: 100;
+      @include prefixer (transition, $transtion);
+      position: absolute;
+      right: 50px; top: 50%;
+      translate: 0 -50%;
+      font-size: 30px;
+      transform-origin: left center;
+      transform: rotate(30deg);
+      @media (width <= 767px) {
+        top: 20px;
+        translate: 0;
+        font-size: 20px;
+      }
+    }
+    &.active, &:hover {
+      &::before {
+        transform: rotate(-30deg);
+      }
+    }
+    .number-item {
+      font: {
+        size: 20px;
+        weight: 900;
+      };
+    }
+    .heading {
+      font: {
+        size: 30px;
+        weight: 900;
+      };
+    }
+  }
+  .active-bg {
+    @include gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+    width: 100%; height: 0px;
+    position: absolute;
+    top: 0; left: calc(1.5rem* 0.5);
+    z-index: -1;
+  }
+}
+/* End Services */
+/* Start Works */
+.works {
+  .shuffle-pannle {
+    clip-path: polygon(2% 0%, 98% 0%, 100% 50%, 98% 100%, 2% 100%, 0% 50%);
+    .shuffle-item {
+      color: #Fff;
+      flex-grow: 1;
+      padding: 7px 20px;
+      @include gradient(90deg, transparent, transparent);
+      background: var(--secondrarColoer);
+      clip-path: polygon(0% 0%, 42% 0%, 50% 0%, 58% 0%, 100% 0%, 100% 50%, 100% 100%, 58% 100%, 50% 100%, 42% 100%, 0% 100%, 0% 50%);
+      &.active {
+        background: var(--primaryColor);
+        clip-path: polygon(10% 0%, 42% 0%, 50% 10%, 58% 0%, 90% 0%, 100% 50%, 90% 100%, 58% 100%, 50% 90%, 42% 100%, 10% 100%, 0% 50%);
+      }
+    }
+  }
+  .portifolo-boxs {
+    z-index: 1;
+    &::before {
+      @extend %before;
+      top: 50%; left: 50%;
+      translate: -50% -50%;
+      width: 322px; height: 308px;
+      border-radius: 50%;
+      @include gradient(260deg, var(--primaryColor) 0 , rgba(115, 67, 210, 0) 100%) ;
+      @include prefixer(filter, blur(150px));
+      z-index: -1;
+    }
+    .box-outer {
+      &.hide {
+        position: absolute;
+        translate: 0 -10px;
+        opacity: 0; z-index: -1;
+      }
+      .box {
+        background: var(--revColorText);
+        padding: 12px;
+        @include prefixer(border-radius, 15px);
+        &:hover {
+          .dec {
+            opacity: 1;
+            translate: 0 0;
+            &::before {
+              transform: rotate(-30deg);
+            }
+          }
+        }
+        .dec {
+          &::before {
+            content: "\f061";
+            font-family: "Font Awesome 6 Pro";
+            font-weight: 100;
+            @include prefixer (transition, $transtion);
+            position: absolute;
+            right: 15px; top: 50%;
+            translate: 0 -50%;
+            font-size: 22px;
+            transform: rotate(-320deg);
+          }
+          color: #fff;
+          position: absolute;
+          bottom: 12px; left: 12px;
+          opacity: 0;
+          translate: 0 0;
+          width: calc(100% - (12px * 2));
+          @include gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+          @include prefixer(border-radius, 15px);
+          > * {
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+}
+/* End Works */
+/* Start Journy */
+.journy {
+  .box {
+    z-index: 1;
+    background: var(--revColorText);
+    &:hover {
+      .inner {
+        opacity: 1;
+      }
+      .time {
+        color: #fff;
+      }
+    }
+    .inner {
+      opacity: 0;
+      z-index: -1;
+      @include gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+    }
+  }
+}
+/* End Journy */
+/* Start Skills */
+.skills {
+  .box {
+    width: 180px; height: 180px;
+    border: 1px solid var(--revColorText);
+    background: var(--revColorText);
+    .inner {
+      width: 100%; height: 100%;
+      padding: 40px 15px 30px;
+      img {
+        width: 80px; height: 80px;
+        filter: grayscale(100);
+      }
+      .persent {
+        color: #777;
+      }
+    }
+    &:hover {
+      border-color: var(--primaryColor);
+      .inner {
+        background: #8750f750;
+        img {
+          filter: grayscale(0);
+          scale: 1.05;
+        }
+        .persent {
+          color: var(--colorText);
+        }
+      }
+    }
+  }
+}
+/* End Skills */
+/* Start Contact */
+.contact {
+  .form-box {
+    background: var(--revColorText);
+    .title {
+      line-height: 1.2;
+    }
+    input:not([type="submit"]),
+    textarea {
+      background: var(--mainBg);
+      caret-color: var(--colorText);
+      color: var(--colorText);
+      border: 1px solid var(--mainBg);
+      padding: 10px 15px;
+      width: 48%;
+      flex-grow: 1;
+      &:focus {
+        outline: 0;
+        border-color: var(--primaryColor);
+      }
+    }
+    textarea {
+      resize: none;
+      height: 200px;
+    }
+  }
+  .data {
+    .box {
+      .icon {
+        @extend %centering;
+        @include circle(50px);
+        @include gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+        font-size: 20px;
+        color: #fff;
+      }
+      .text {
+        > * {
+          line-height: 1.4;
+        }
+        .link:hover {
+          color: var(--primaryColor);
+        }
+      }
+    }
+  }
+}
+/* End Contact */
+/* Start KeyFrams */
+@include keyFrame(scalein) {
+  to {
+    scale: 1.1;
+  }
+}
+/* End KeyFrams */

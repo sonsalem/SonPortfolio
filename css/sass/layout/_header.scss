@@ -1,0 +1,86 @@
+/* Start Header */
+.upper-nav {
+  position: absolute;
+  width: 100%;
+  top: 0; left: 0;
+  z-index: 100000;
+    &.fixed_top {
+      position: fixed;
+      width: 100%;
+      top: -100%;
+      background: var(--mainBg);
+      box-shadow: 0px 4px 17.64px 0.36px rgba(0, 0, 0, 0.1);
+      animation: scrollNav .7s forwards;
+    }
+  .logo {
+    img {
+      @include circle(50px);
+    }
+    a {
+      color: var(--colorText);
+      &:hover {
+        color: var(--primaryColor);
+      }
+    }
+  }
+  .links {
+    a {
+      &::before {
+        @extend %before;
+        width: 0; height: 2px;
+        @include prefixer(transition, $transtion);
+        bottom: 0; left: 0;
+        @include gradient(90deg, var(--primaryColor), var(--secondrarColoer))
+      }
+      &:hover::before,
+      &.active::before {
+        width: 100%;
+      }
+    }
+    @media (width <= 992px) {
+      & {
+        margin-top: 20px;
+        order: 10000;
+        height: 0px;
+        overflow: hidden;
+        ul {
+          flex-direction: column;
+          align-items: start !important;
+          width: 100%;
+          li, a {
+            width: 100%;
+            &::before {
+              bottom: -4px;
+            }
+          }
+        }
+      }
+      &.show {
+        height: 259.2px;
+        background: var(--mainBg);
+      }
+    }
+  }
+  .prograss-bar {
+    width: 100%; height: 10px;
+    .prograss {
+      animation: scrollYPrograss linear;
+      animation-timeline: scroll(y);
+      width: 0; height: 100%;
+      @include gradient(90deg, var(--primaryColor), var(--secondrarColoer));
+    }
+  }
+}
+/* End Header */
+/* Start Animation */
+@include keyFrame (scrollYPrograss) {
+  to {
+    width: 100%;
+  }
+}
+@include keyFrame (scrollNav) {
+  to {
+    top: 0;
+  }
+}
+/* End Animation */
